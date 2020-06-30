@@ -16,10 +16,10 @@ cd mjs
 sh run_exp.sh $RUNTIME &
 cd ..
 
-sleep ${RUNTIME}h
+/bin/sleep ${RUNTIME}h
 
 #some safety buffer s.t. all is properly closed and everything had enough time to stop
-sleep 15m
+/bin/sleep 15m
 
 cd csv/eval/
 sh comp_run.sh csvparser &
