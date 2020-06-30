@@ -14,6 +14,7 @@ import core.Utils as Utils
 from core.InputWrapper import InputWrapper
 from core.SubstitutionExtractor import get_substitution
 
+home = os.environ['HOME']
 
 def run_and_trace(parentdir, inpt: str, as_arg: bool, trace: bool = True) -> int:
     """
@@ -51,7 +52,7 @@ def run_and_trace(parentdir, inpt: str, as_arg: bool, trace: bool = True) -> int
             me = os.path.join(parentdir, "metadata")
             po = os.path.join(parentdir, "pyg.txt")
             t = os.path.join(parentdir, "output.gz")
-            os.system("%s/../install/bin/trace-taint -me %s -po %s -t %s" % (Utils.cwd, me, po, t))
+            os.system("%s/taints/install/bin/trace-taint -me %s -po %s -t %s" % (home, me, po, t))
         else:
             pass
 
@@ -227,7 +228,7 @@ if __name__ == '__main__':
     # instrument program
     Utils.cwd = os.getcwd()
     if instrument:
-        os.system("%s/../install/bin/trace-instr %s %s/../samples/excluded_functions" % (Utils.cwd, Utils.subject, Utils.cwd))
+        os.system("%s/taints/install/bin/trace-instr %s %s/../samples/excluded_functions" % (home, Utils.subject, Utils.cwd))
     Utils.g_flag = ""
     if args.flag:
         Utils.g_flag = "-%s" % args.flag
