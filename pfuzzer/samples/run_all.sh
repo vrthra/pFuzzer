@@ -11,3 +11,4 @@ sh run_exp.sh $RUNTIME csvparser &
 cd ../mjs
 sh run_exp.sh $RUNTIME mjs &
 cd ..
+wait
