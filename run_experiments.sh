@@ -5,3 +5,4 @@ cd ../klee
 sh run_all.sh $RUNTIME &
 cd ../pfuzzer/samples/
 sh run_all.sh $RUNTIME &
+wait
