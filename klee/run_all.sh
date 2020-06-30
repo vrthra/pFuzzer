@@ -1,5 +1,5 @@
 RUNTIME=$1
-: ${RUNTIME:=0.1}
+: ${RUNTIME:=0.01}
 
 (cd csv; sh run_exp.sh $RUNTIME) &
 (cd ini; sh run_exp.sh $RUNTIME) &

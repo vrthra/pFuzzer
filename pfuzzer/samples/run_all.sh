@@ -1,5 +1,5 @@
 RUNTIME=$1
-: ${RUNTIME:=0.1}
+: ${RUNTIME:=0.01}
 
 (cd cjson/; sh run_exp.sh $RUNTIME cJSON) &
 (cd ini/; sh run_exp.sh $RUNTIME ini) &
