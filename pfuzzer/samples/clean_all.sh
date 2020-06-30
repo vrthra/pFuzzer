@@ -1,11 +1,5 @@
-cd cjson/
-sh clean.sh
-cd ../ini
-sh clean.sh
-cd ../tinyc
-sh clean.sh
-cd ../csv
-sh clean.sh
-cd ../mjs
-sh clean.sh
-cd ..
+(cd cjson/; sh clean.sh)
+(cd ini; sh clean.sh)
+(cd tinyc; sh clean.sh)
+(cd csv; sh clean.sh)
+(cd mjs; sh clean.sh)
