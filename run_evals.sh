@@ -28,3 +28,4 @@ python3 coverage.py -p ../samples/ini/ini.c -a false > ../samples/ini/evallog.tx
 python3 coverage.py -p ../samples/csv/csvparser.c -a false > ../samples/csv/evallog.txt 2>&1 
 python3 coverage.py -p ../samples/tinyc/tiny.c -a false > ../samples/tinyc/evallog.txt 2>&1 
 python3 coverage.py -p ../samples/mjs/mjs.c -a false > ../samples/mjs/evallog.txt 2>&1 
+wait
